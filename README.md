@@ -1,3 +1,49 @@
+# Finacial Data Demo
+
+## How to run the project locally
+
+1. Download project from GitHub, extract the files to the location you prefer.
+
+2. Open terminal and navigate to the directory downloaded from github
+
+3. Install dependencies in directory with this command
+```npm i```
+
+4. After dependencies have been installed, start the server with this command
+```npm start```
+
+5. Go to localhost:3000 in your web browser to view the application
+
+## About the Project
+
+### Requirements
+1. Use React to build the application.
+
+2. Fetch historical quarterly financial data from the Alpha Vantage API for a specified stock symbol.
+
+3. Plot the following data points on a chart:
+    * Quarterly net income from the Income Statement.
+    * Quarterly total revenue from the Income Statement.
+    * Quarterly total shareholder equity from the Balance Sheet.
+
+4. Display the chart in a visually appealing way on the page.
+
+5. [Optional] Include an input field or any other suitable UI element to allow users to search for different stock symbols or companies.
+
+6. Implement error handling for failed API requests.
+
+7. Add any additional features or improvements you think would enhance the application.
+
+### Notes
+
+The application is designed to display a chart of net income, total revenue, and shareholder equity for IBM across quarters from the [Alpha Vantage Stock API](https://www.alphavantage.co/documentation/). 
+
+Due to constraints on free API keys, this application only uses the demo API key. The logic underlying the application can accomdate searching different companies and displaying their data, but without adequate ability to query the API while developing, I was limited to the demo API calls available (data from IBM, specific search strings). 
+
+Therefore only data from IBM will be displayed on the chart, and while the strings available from the demo API ("BA", "SAIC", "tesco", and "tencent") can be queried in the search and companies that match those strings will be displayed in the dropdown, selecting any of them won't return any data, since the financial data for those companies is not available with the demo key. The underlying logic of the code is able to accomodate changes to make API calls for data on other companies, I would just need an API key that didn't so quickly run out of calls. (The current free API key is limited to 25 calls per day.)
+
+I also started to incorporate light mode and dark mode logic into this application, but it is currently a work in progress. I've left the button in to show how it might work, and the foundational logic has been implemented in the code. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -13,58 +59,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
