@@ -6,11 +6,9 @@
 
 2. Open terminal and navigate to the directory downloaded from github
 
-3. Install dependencies in directory with this command
-```npm i```
+3. Install dependencies in directory with this command: ```npm i```
 
-4. After dependencies have been installed, start the server with this command
-```npm start```
+4. After dependencies have been installed, start the server with this command: ```npm start```
 
 5. Go to localhost:3000 in your web browser to view the application
 
